@@ -49,15 +49,27 @@ to 70
             System.out.println(temp.data);
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println("Welcome To Linked list !!!!");
-        LinkedList linkedList = new LinkedList();
-        linkedList.addFirst(70);
-        linkedList.addFirst(30);
-        linkedList.addFirst(56);
-        linkedList.display();
-
-
+    /*
+    Ability to create Linked List by appending 30 and 70 to 56 Node with data 56 is First Created
+-   Next Append 30 to 56 Finally Append 70 to 30 LinkedList Sequence: 56->30->70
+     */
+    /*
+    Add last method
+     */
+    public void addLast(Object data) {
+        Node newNode = new Node(data);
+        if (head == null)
+            head = newNode;
+        else if (head.next == null)
+            head.next = newNode;
+        else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
     }
+
+
 }
