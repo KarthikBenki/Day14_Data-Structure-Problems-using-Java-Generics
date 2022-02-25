@@ -21,25 +21,33 @@ public class SortedLinkedList<T extends Comparable<T>>{
         if(head == null)
             head = newNode;
         else{
-            Node current=head,index=null,temp=head;
+            Node temp=head;
             while(temp.next!=null) {
-                while (current != null) {
-                    index = current.next;
-                    while (index != null) {
-                        if (current.data.compareTo(index.data) > 0) {
-                            T swap = (T) current.data;
-                            current.data = index.data;
-                            index.data = (Comparable) swap;
-                        }
-                        index = index.next;
-                    }
-                    current = current.next;
-                }
                 temp=temp.next;
             }
             temp.next=newNode;
-
+            sorting();
         }
+    }
+
+    /*
+    sorting using bubble
+     */
+    public <T>void sorting(){
+        Node current=head,index=null;
+        while (current != null) {
+            index = current.next;
+            while (index != null) {
+                if (current.data.compareTo(index.data) > 0) {
+                    T swap = (T) current.data;
+                    current.data = index.data;
+                    index.data = (Comparable) swap;
+                }
+                index = index.next;
+            }
+            current = current.next;
+        }
+
     }
 
     /*
