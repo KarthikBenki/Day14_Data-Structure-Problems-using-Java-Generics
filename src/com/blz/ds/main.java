@@ -9,8 +9,10 @@ public class main {
         linkedList.addLast(40);
         linkedList.addLast(70);
         linkedList.display();
+        linkedList.getSize();
         linkedList.deleteElement(40);
         linkedList.display();
+        linkedList.getSize();
 
     }
 

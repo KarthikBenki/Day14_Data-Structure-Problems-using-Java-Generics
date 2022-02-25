@@ -179,5 +179,23 @@ to 70
         }
     }
 
+    /*
+     * calculating size of linked list
+     */
+    public int getSize() {
+        int count = 0;
+        if (head == null)
+            return count;
+        else {
+            Node temp = head;
+            while (temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            System.out.println("Size is "+count);
+            return count;
+        }
+    }
+
 
 }
