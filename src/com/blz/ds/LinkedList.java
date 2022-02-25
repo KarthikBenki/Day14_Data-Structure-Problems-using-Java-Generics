@@ -1,6 +1,10 @@
 package com.blz.ds;
 
+import java.util.Scanner;
+
 public class LinkedList {
+    Scanner scanner = new Scanner(System.in);
+
     Node head;
 
     class Node {
@@ -71,5 +75,25 @@ to 70
         }
     }
 
+    /*
+    add middle method
+     */
+
+    public void addMiddle(Object data){
+        Node newNode = new Node(data);
+
+        if (head==null)
+            head=newNode;
+        else{
+            Node temp =head;
+            System.out.println("Enter the data after which new data should be added");
+            Object data1 = scanner.nextInt();
+            while(temp.data!=data1){
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next=newNode;
+        }
+    }
 
 }
