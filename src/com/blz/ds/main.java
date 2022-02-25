@@ -8,7 +8,7 @@ public class main {
         linkedList.addLast(70);
         linkedList.addMiddle(30,56);
         linkedList.display();
-        linkedList.deleteFirst();
+        linkedList.deleteLast();
         linkedList.display();
 
 

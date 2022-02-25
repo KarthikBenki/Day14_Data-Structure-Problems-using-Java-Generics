@@ -99,7 +99,7 @@ to 70
     Note there is new head Final Sequence: 30->70
      */
     /*
-    delete last method
+    delete first method
      */
     public void deleteFirst() {
         if (head == null)
@@ -107,5 +107,25 @@ to 70
         else
             head = head.next;
     }
+    /*
+    Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
+    Note there is new tail Final Sequence: 56->30
+     */
+    /*
+    delete last method
+     */
+    public void deleteLast() {
+        if (head == null)
+            System.out.println("No elements present to delete");
+        else if (head.next == null)
+            head = null;
+        else {
+            Node temp = head;//creating temp object assigining head to it
+            while (temp.next.next != null)
+                temp = temp.next;
+            temp.next = null;
+        }
+    }
+
 
 }
