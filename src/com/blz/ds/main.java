@@ -6,7 +6,9 @@ public class main {
         LinkedList linkedList = new LinkedList();
         linkedList.addLast(56);
         linkedList.addLast(70);
-        linkedList.addMiddle(30);
+        linkedList.addMiddle(30,56);
+        linkedList.display();
+        linkedList.deleteFirst();
         linkedList.display();
 
 
