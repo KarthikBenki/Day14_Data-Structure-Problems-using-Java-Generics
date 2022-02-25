@@ -156,5 +156,28 @@ to 70
         }
     }
 
+    /*
+    Ability to delete 40 from the Linked
+    List sequence of 56->30->40->70
+    and show the size of LinkedList is 3
+     */
+    /*
+    Ability to delete given element
+     */
+    public void deleteElement(Object data){
+        if(head==null)
+            System.out.println("Linked list is empty so cant delete");
+        else if(head.data==data){
+            head=null;
+        }
+        else{
+            Node temp=head;
+            while(temp.next.data!=data){
+                temp=temp.next;
+            }
+            temp.next=temp.next.next;
+        }
+    }
+
 
 }

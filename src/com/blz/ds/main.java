@@ -6,11 +6,12 @@ public class main {
         LinkedList linkedList = new LinkedList();
         linkedList.addLast(56);
         linkedList.addLast(30);
+        linkedList.addLast(40);
         linkedList.addLast(70);
         linkedList.display();
-        linkedList.addMiddle(40,30);
+        linkedList.deleteElement(40);
         linkedList.display();
-        linkedList.searchElement(30);
+
     }
 
 }
