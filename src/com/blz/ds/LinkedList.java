@@ -53,6 +53,7 @@ to 70
             System.out.println(temp.data);
         }
     }
+
     /*
     Ability to create Linked List by appending 30 and 70 to 56 Node with data 56 is First Created
 -   Next Append 30 to 56 Finally Append 70 to 30 LinkedList Sequence: 56->30->70
@@ -79,18 +80,18 @@ to 70
     add middle method
      */
 
-    public void addMiddle(Object data,Object data1){
+    public void addMiddle(Object data, Object data1) {
         Node newNode = new Node(data);
 
-        if (head==null)
-            head=newNode;
-        else{
-            Node temp =head;
-            while(temp.data!=data1){
+        if (head == null)
+            head = newNode;
+        else {
+            Node temp = head;
+            while (temp.data != data1) {
                 temp = temp.next;
             }
             newNode.next = temp.next;
-            temp.next=newNode;
+            temp.next = newNode;
         }
     }
 
@@ -107,6 +108,7 @@ to 70
         else
             head = head.next;
     }
+
     /*
     Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
     Note there is new tail Final Sequence: 56->30
@@ -124,6 +126,33 @@ to 70
             while (temp.next.next != null)
                 temp = temp.next;
             temp.next = null;
+        }
+    }
+    /*
+    Ability to search
+    LinkedList to find Node
+    with value 30
+     */
+
+    /*
+    search element
+     */
+    public void searchElement(Object data) {
+        byte flag = 0;
+        if (head == null)
+            System.out.println("No elements present to search");
+        else {
+            Node temp = head;
+            while (temp != null) {
+                if (data.equals(temp.data)) {
+                    flag = 1;
+                    System.out.println(data + " is present in linked list");
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (flag == 0)
+                System.out.println(data + " is absent in linked list");
         }
     }
 
